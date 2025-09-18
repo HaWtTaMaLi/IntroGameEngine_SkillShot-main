@@ -9,10 +9,10 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 43c4487ec4f5d8643b42f42963b79ecf
   - enabled: 1
-    path: Assets/Scenes/Level_01.unity
+    path: Assets/Scenes/Rock_Bottom.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
-    path: Assets/Scenes/Level_02.unity
+    path: Assets/Scenes/Bumpy_Road.unity
     guid: 47a15b0e0f4e71b498519153ccc70662
   - enabled: 1
     path: Assets/Scenes/Level_03.unity
