@@ -38,6 +38,9 @@ public class BallManager : MonoBehaviour
     private void Start()
     {
         ballStopped = true; // the ball should be stopped at the start of the game
+        
+        Rigidbody rb = GetComponent<Rigidbody>();
+        rb.linearDamping = 0.3f; //drag to make the ball stop sooner: Katelyn Nicholson
 
         //cameraManager.freeLookCamera.Follow = ball.transform;
         //cameraManager.instance.freeLookCamera.LookAt = ball.transform;
@@ -58,7 +61,7 @@ public class BallManager : MonoBehaviour
             uIManager.GameplayUIController.UpdateShotsRemainingLabel();            
 
             ballStopped = false; // the ball should be moving at this point
-            rb_ball.AddForce(aimGuide.transform.forward * 25, ForceMode.VelocityChange);
+            rb_ball.AddForce(aimGuide.transform.forward * 25, ForceMode.VelocityChange); //speed of the ball when shot: Katelyn Nicholson
 
             gameStateManager.SwitchToState(GameState_Rolling.Instance);
         }        
