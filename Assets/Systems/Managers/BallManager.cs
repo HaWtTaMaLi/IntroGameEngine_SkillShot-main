@@ -5,6 +5,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class BallManager : MonoBehaviour
 {
@@ -39,8 +40,16 @@ public class BallManager : MonoBehaviour
     {
         ballStopped = true; // the ball should be stopped at the start of the game
         
+        //drag to make the ball stop sooner: Katelyn Nicholson
         Rigidbody rb = GetComponent<Rigidbody>();
-        rb.linearDamping = 0.3f; //drag to make the ball stop sooner: Katelyn Nicholson
+        rb.linearDamping = 0.3f;
+        /*//if Scene 'Twisted Path' is active ball drag set to 0: Katelyn Nicholson
+        Scene currentScene = SceneManager.GetActiveScene();
+        string sceneName = currentScene.name;
+        if(sceneName == "4_Twisted_Path")
+        {
+            //nothing worked
+        }*/
 
         //cameraManager.freeLookCamera.Follow = ball.transform;
         //cameraManager.instance.freeLookCamera.LookAt = ball.transform;
